@@ -2,6 +2,9 @@ package com.linearly;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import java.util.Arrays;
 
 @SpringBootApplication
 public class MainApplication {
@@ -13,6 +16,14 @@ public class MainApplication {
 
 		// TODO: Remove before testing in web setting
 		// System.exit(1);
-		SpringApplication.run(MainApplication.class, args);
+		ApplicationContext ctx = SpringApplication.run(MainApplication.class, args);
+
+		System.out.println("Let's inspect the beans provided by Spring Boot:");
+
+		String[] beanNames = ctx.getBeanDefinitionNames();
+		Arrays.sort(beanNames);
+		for (String beanName : beanNames) {
+			System.out.println(beanName);
+		}
 	}
 }

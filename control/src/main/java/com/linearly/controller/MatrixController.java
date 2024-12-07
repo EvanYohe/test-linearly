@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MatrixController {
 
+
+
     /*
      * This method loads the matrix-module.jte render into the module-container
      * div on the index page.
@@ -34,7 +36,7 @@ public class MatrixController {
     }
 
     /*
-     * Right now, this method works and can sucessfully resize the table
+     * Right now, this method works and can successfully resize the table
      * to the dimensions the user puts in the input field. But I have one method
      * for each input matrix and it feels like this could be done in one method.
      */

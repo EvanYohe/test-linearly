@@ -1,11 +1,16 @@
 package com.linearly.model;
 
+import java.util.UUID;
+
+import java.util.UUID;
+
 public class Matrix {
 
     private int rowDimension;
     private int colDimension;
     private double[][] matrix;
     final double EPSILON = 1.0e-6;
+    final UUID id = UUID.randomUUID();
 
     /**
      * Default constructor for creating an empty matrix
@@ -38,6 +43,15 @@ public class Matrix {
         this.rowDimension = rowDimension;
         this.colDimension = colDimension;
         this.matrix = new double[rowDimension][colDimension];
+    }
+
+    /**
+     * Returns the UUID of the matrix as a String
+     *
+     * @return String
+     */
+    public String getId() {
+        return id.toString();
     }
 
     /**
